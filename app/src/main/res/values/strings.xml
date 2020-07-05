@@ -30,6 +30,24 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+    <string name="menu_feed">Home</string>
+    <string name="menu_upload">Upload</string>
+    <string name="menu_fav">My Wishlist</string>
+    <string name="menu_account">My Account</string>
+    <string name="menu_language">Choose Language</string>
+    <string name="menu_help">Help Centre</string>
+
     <string name="or">OR</string>
+    <string name="next">NEXT</string>
+
+    <string name="sel_catergory">Select your Categories</string>
+
+    <string name="kavana">KAVANA</string>
+    <string name="janapada">JANAPADA</string>
+    <string name="moral">MORAL</string>
+    <string name="kids">KIDS</string>
+    <string name="literature">LITERATURE</string>
+    <string name="history">HISTORY</string>
+
 
 </resources>

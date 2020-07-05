@@ -1,4 +1,4 @@
-package com.heluvekatheya.heluvekatheya.ui.slideshow
+package com.heluvekatheya.heluvekatheya.ui.favourite
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.heluvekatheya.heluvekatheya.R
 
-class SlideshowFragment : Fragment() {
+class FavoriteFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var favoriteViewModel: FavoriteViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
-            ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(this, Observer {
+        favoriteViewModel =
+            ViewModelProviders.of(this).get(FavoriteViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_favorite, container, false)
+        val textView: TextView = root.findViewById(R.id.favorite)
+        favoriteViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root
