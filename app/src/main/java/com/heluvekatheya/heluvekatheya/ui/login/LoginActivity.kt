@@ -11,15 +11,12 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import android.content.Intent
 import android.util.Log
+import android.widget.*
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -48,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
+        changeTextGoogleSignIn(findViewById<SignInButton>(R.id.sign_in_button),"Sign in with Google")
         findViewById<SignInButton>(R.id.sign_in_button).setOnClickListener(clickListener)
 
         initGoogleClient()
@@ -135,6 +133,16 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
                 loginViewModel.loginWithEmail(username.text.toString(), password.text.toString())
+            }
+        }
+    }
+
+    private fun changeTextGoogleSignIn(signInButton: SignInButton, buttonText: String){
+        for (i in 0 until signInButton.childCount) {
+            val v = signInButton.getChildAt(i)
+            if (v is TextView) {
+                v.text = buttonText
+                return
             }
         }
     }

@@ -2,26 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
+<!--Need to change icons here-->
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_feed" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_fav"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_fav" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_account"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_account" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_lang"
             android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
-    </group>
+            android:title="@string/menu_language" />
 
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_help" />
+    </group>
+<!--No need of this, remove it later once confirmed-->
     <item android:title="Communicate">
         <menu>
             <item

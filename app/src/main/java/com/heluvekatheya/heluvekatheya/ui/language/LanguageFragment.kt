@@ -1,4 +1,4 @@
-package com.heluvekatheya.heluvekatheya.ui.gallery
+package com.heluvekatheya.heluvekatheya.ui.language
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.heluvekatheya.heluvekatheya.R
 
-class GalleryFragment : Fragment() {
+class LanguageFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
+    private lateinit var languageViewModel: LanguageViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProviders.of(this).get(GalleryViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_gallery, container, false)
-        val textView: TextView = root.findViewById(R.id.text_gallery)
-        galleryViewModel.text.observe(this, Observer {
+        languageViewModel =
+            ViewModelProviders.of(this).get(LanguageViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_language, container, false)
+        val textView: TextView = root.findViewById(R.id.language)
+        languageViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root

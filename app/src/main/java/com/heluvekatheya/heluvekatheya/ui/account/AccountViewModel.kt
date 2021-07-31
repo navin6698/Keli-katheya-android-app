@@ -1,13 +1,13 @@
-package com.heluvekatheya.heluvekatheya.ui.gallery
+package com.heluvekatheya.heluvekatheya.ui.account
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class AccountViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
+        value = "This is my account Fragment"
     }
     val text: LiveData<String> = _text
 }
